@@ -2,274 +2,101 @@
 <html>
 
 <head>
-  <title>Romain Letellier</title>
+  <title>Studio Mercvre</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  <style>
-  :root {
-    --colorDark: black;
-    --colorLight: white;
-    --color1: rgb(247, 72, 79);
-    --color2: rgb(248, 186, 139);
-    --color3: rgb(65, 90, 218);
-  }
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="imagesloaded.pkgd.min.js"></script>
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    /*color: var(--colorDark);*/
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      /*-webkit-transform: translate3d(0, 100%, 0);*/
-      transform: translate3d(0, 100%, 0);
-    }
-
-    100% {
-      opacity: 1;
-      transform: none;
-    }
-  }
-
-  body {
-    opacity: 0;
-    font-family: sans-serif;
-    color: var(--colorDark);
-    animation: fadeIn .5s ease-in .5s 1 forwards;
-    background-color: var(--colorLight);
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.25em;
-  }
-
-  p {
-    font-size: .75em;
-  }
-
-  header {
-    margin-top: 1%;
-  }
-
-  header a {
-    display: block;
-  }
-
-  header img {
-    display: block;
-    margin: auto;
-    width: 10%;
-    filter: invert(0%);
-    transition: filter 0.5s ease-in-out;
-  }
-
-  header img:hover {
-    filter: invert(100%);
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  nav a {
-    padding: 20px 20px;
-    color: rgb(53, 50, 43);
-    text-decoration: none;
-    text-align: center;
-    animation: fadeInUp .5s ease-in-out .5s 1;
-    transition-property: opacity, color, transform;
-    transition-duration: .5s, .5s, .3s;
-    transition-timing-function: ease-in-out;
-  }
-
-  nav:hover a {
-    opacity: 0.2;
-  }
-
-  nav a:hover {
-    opacity: 1;
-    color: var(--color1);
-    /*transform: scale(1.1);*/
-  }
-
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    /*z-index: 1;*/
-  }
-
-  aside {
-    flex: 15%;
-    /*background-color: var(--color2);*/
-  }
-
-  .experience {
-    display: flex;
-    flex-direction: column;
-    flex: 70%;
-    padding: 20px;
-  }
-
-  article {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    animation: fadeInUp .5s ease-in-out .5s 1;
-  }
-
-  .portfolio {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*background-color: var(--colorLight);*/
-  }
-
-  .square {
-    display: flex;
-    height: 300px;
-    width: 300px;
-    margin: 10px;
-    /*background-color: red;*/
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid white;
-    /*border-radius: 15px;*/
-  }
-
-  .square img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    transition: transform .9s ease-in-out;
-  }
-
-  iframe {
-    height: 300px;
-    width: 300px;
-    transition: transform .9s ease-in-out;
-    /*border-radius: 15px;*/
-  }
-
-  .square img:hover,
-  .square iframe:hover {
-    transform: scale(1.05);
-  }
-
-  @media screen and (max-width: 700px) {
-    header img {
-      width: 50%;
-    }
-
-    nav {
-      flex-direction: column;
-    }
-
-    aside {
-      display: none;
-    }
-
-    h1 {
-      font-size: 1.5em;
-    }
-
-    h2 {
-      font-size: 1em;
-    }
-
-    p {
-      font-size: .6em;
-    }
-
-    .square {
-      height: 250px;
-      width: 250px;
-    }
-
-    .square img {
-      height: 250px;
-      width: 250px;
-    }
-
-    iframe {
-      height: 250px;
-      width: 250px;
-    }
-  }
-
-  #myVideo {
-    position: fixed;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -100;
-  }
-
-  .experience:hover {
-    color: var(--color1);
-  }
-
-  .experience>* {
-    transition: color .3s ease-in-out;
-  }
-
-  .experience>*:hover {
-    color: var(--color3);
-  }
-
-  .experience ::selection {
-    color: var(--color1);
-    background: var(--color3);
-  }
-
-  </style>
+  <script src="mainscript.js"></script>
 </head>
 
 <body>
-  <header>
-    <!--<img src="test.svg" alt="Studio Mercvre">!-->
-    <img src="romain.png" alt="Romain Letellier">
-  </header>
-  <nav>
-    <a href="#experience">Expérience</a>
-    <a href="#education">Education</a>
-    <a href="#competences">Compétences</a>
-    <a href="#interets">Centres&nbsp;d'intérêts</a>
-  </nav>
 
-<!--  <video autoplay muted loop playsinline id="myVideo">
-    <source src="orgalife.mp4" type="video/mp4" />
-  </video>
-  !-->
+  <header>
+    <nav>
+      <a href="index.html"><img src="logo.png" alt="Studio Mercvre" /></a>
+      <ul>
+        <li>
+          <p id="visual">Visual</p>
+          <ul>
+            <li>
+              <p id="logo">Logo</p>
+            </li>
+            <li>
+              <p id="illustration">Illustration</p>
+            </li>
+            <li>
+              <p id="photography">Photography</p>
+            </li>
+            <li>
+              <p id="typography">Typography</p>
+            </li>
+            <li>
+              <p id="pattern">Pattern</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p id="audio">Audio</p>
+        </li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <aside>
-    </aside>
-    <div class="experience">
+
+    <div id="shuffle">
+
+      <div class="row">
+
+        <div class="project visual logo" id="studiomercvre">
+          <div class="projectelement"><a href="studiomercvre.html"><img src="visual/logo/studiomercvre/studiomercvre1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual logo" id="lartwhy">
+          <div class="projectelement"><a href="lartwhy.html"><img src="visual/logo/lartwhy/lartwhy1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual typography" id="west">
+          <div class="projectelement"><a href="west.html"><img src="visual/type/west/west1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual pattern" id="planets">
+          <div class="projectelement"><a href="planets.html"><img src="visual/pattern/planets/planets1.png" alt="" /></a></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="project visual pattern" id="triangles">
+          <div class="projectelement"><a href="triangles.html"><img src="visual/pattern/triangles/triangles1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual pattern" id="flowers">
+          <div class="projectelement"><a href="flowers.html"><img src="visual/pattern/flowers/flowers1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual illustration" id="ruskho">
+          <div class="projectelement"><a href="ruskho.html"><img src="visual/illustration/ruskho/ruskho1.png" alt="" /></a></div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- <div class="experience">
 
       <h1 id="experience">Expérience</h1>
       <article>
         <h2>Hollywood Film Companies</h2>
         <p>Professional actor for various world renowned companies</p>
       </article>
+
       <article>
         <h2>Rufus and Coco</h2>
         <p>Financial analyst</p>
@@ -358,14 +185,9 @@
           <img src="rom3.jpeg" alt="Romain avec son ami" />
         </div>
       </div>
-    </div>
-    <aside>
-    </aside>
+    </div> -->
   </main>
 
-
-  <script>
-  </script>
 </body>
 
 </html>
