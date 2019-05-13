@@ -4,7 +4,7 @@
 <head>
   <title>Studio Mercvre</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -12,14 +12,100 @@
   <script src="imagesloaded.pkgd.min.js"></script>
 
   <script src="mainscript.js"></script>
+
+  <style>
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: white;
+    }
+
+    .projectelement {
+      position: relative;
+    }
+
+    .projectelement:hover .overlay {
+      opacity: 1;
+    }
+
+    .projectelement img {
+      width: 100%;
+    }
+
+    .text {
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    <nav>
+
+    <!-- <div class="dropdown"> -->
+
+      <button onclick="dropdownFunction()" class="dropbtn">Dropdown</button>
+
+      <nav id="myDropdown" class="dropdown-content fill-height-or-more hidden">
+        <a href="index.html">
+          <img src="logo.png" alt="Studio Mercvre" />
+        </a>
+
+          <div id="visual" class="outside">
+            <p >Visual</p>
+          </div>
+
+          <div id="logo" class="inside">
+            <p >Logo</p>
+          </div>
+          <div id="illustration" class="inside">
+            <p >Illustration</p>
+          </div>
+          <div id="pattern" class="inside">
+            <p >Pattern</p>
+          </div>
+          <div id="photography" class="inside">
+            <p >Photography</p>
+          </div>
+          <div id="typography" class="inside">
+            <p >Typography</p>
+          </div>
+          <div id="video" class="inside">
+            <p >Video</p>
+          </div>
+          <div id="website" class="inside">
+            <p >Website</p>
+          </div>
+
+          <div id="audio" class="outside">
+            <p >Audio</p>
+          </div>
+
+          <div class="outside">
+            <a href="">About</a>
+          </div>
+
+      </nav>
+
+
+
+      <!-- <nav id="myDropdown" class="dropdown-content">
       <a href="index.html"><img src="logo.png" alt="Studio Mercvre" /></a>
-      <ul>
+      <ul class="fill-height-or-more">
         <li>
           <p id="visual">Visual</p>
           <ul>
@@ -51,7 +137,10 @@
         </li>
         <li><a href="">About</a></li>
       </ul>
-    </nav>
+    </nav> -->
+
+
+    <!-- </div> -->
   </header>
 
   <main>
@@ -61,11 +150,31 @@
       <div class="row">
 
         <div class="project visual logo" id="studiomercvre">
-          <div class="projectelement"><a href="studiomercvre.html"><img src="visual/logo/studiomercvre/studiomercvre1.png" alt="" /></a></div>
+          <div class="projectelement">
+            <a href="studiomercvre.html">
+              <img src="visual/logo/studiomercvre/studiomercvre1.png" alt="" />
+              <div class="overlay">
+                <div class="text">
+                  <h3>Studio Mercvre logo</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
 
         <div class="project visual typography" id="west">
-          <div class="projectelement"><a href="west.html"><img src="visual/type/west/west1.png" alt="" /></a></div>
+          <div class="projectelement">
+            <a href="west.html">
+              <img src="visual/type/west/west1.png" alt="" />
+              <div class="overlay">
+                <div class="text">
+                  <h3>West</h3>
+                  <p>Handmade typography</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div class="project visual photography" id="djordan">

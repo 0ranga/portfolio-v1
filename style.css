@@ -6,15 +6,13 @@
   --color3: rgb(65, 90, 218);
 }
 
-@font-face {
+/* @font-face {
   font-family: myFont;
   src: url(font/Bentham-Regular.ttf);
-}
-
+} */
 * {
   box-sizing: border-box;
   margin: 0;
-  /*color: var(--colorDark);*/
 }
 
 html, body {
@@ -22,7 +20,7 @@ html, body {
   height: 100%;
 }
 
-/* @keyframes fadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -32,7 +30,7 @@ html, body {
   }
 }
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
@@ -46,20 +44,24 @@ html, body {
 body {
   font-family: futura, myFont, didot, sans-serif;
   color: var(--colorDark);
-  animation: fadeIn .5s ease-in .5s 1 forwards;
+  /* animation: fadeIn .5s ease-in .5s 1 forwards; */
   background-color: var(--colorLight);
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
 }
 
 p {
-  font-size: .75em;
+  font-size: 1em;
 }
 
 header {
@@ -70,6 +72,11 @@ header {
   height: 100vh;
 }
 
+.dropbtn {
+  display: none;
+  margin-left: 10%;
+}
+
 header img {
   display: block;
   margin: auto;
@@ -78,15 +85,50 @@ header img {
   margin-bottom: 10px;
 }
 
-/*
-nav {
-  width: 20%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
- */
-ul {
+
+.fill-height-or-more > div, .fill-height-or-more > a {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inside p {
+  text-align: right;
+  font-weight: normal;
+}
+
+nav a, nav p {
+  font-size: 3vw;
+  display: block;
+  color: var(--colorDark);
+  padding: 0px 20px;
+  text-decoration: none;
+  text-align: left;
+  animation: fadeInUp .5s ease-in-out .5s 1;
+}
+
+nav .outside:hover, nav .outside:hover, nav .outside:hover p, nav .outside:hover a {
+  cursor: pointer;
+  color: var(--colorLight);
+  background: var(--color2);
+  font-style: italic;
+}
+
+nav .inside:hover, nav .inside:hover, nav .inside:hover p, nav .inside:hover a {
+  cursor: pointer;
+  color: var(--colorLight);
+  background: var(--color3);
+  font-style: italic;
+}
+
+/* ul {
   margin: 0;
   padding: 0;
 }
@@ -103,7 +145,6 @@ li li p {
 nav a, nav p {
   cursor: pointer;
   font-size: 3vw;
-  /* font-weight: bold; */
   display: block;
   padding: 0px 20px;
   color: var(--colorDark);
@@ -121,7 +162,7 @@ nav li a:hover, nav li p:hover {
 nav li li a:hover, nav li li p:hover {
   color: var(--colorLight);
   background: var(--color3);
-}
+} */
 
 main {
   /* padding-left: 20%;
@@ -152,7 +193,7 @@ main {
 }
 
 .wholewidth {
-  width:100%;
+  width: 100%;
 }
 
 .projectelement iframe {
@@ -177,7 +218,6 @@ main {
   width: 100%;
   height: 300px;
 } */
-
 .projectelement .youtubeContainer iframe {
   width: 100%;
   height: 100%;
@@ -212,45 +252,81 @@ img.right {
   left: 20%;
 }
 
-/* main article, main h1 {
-  padding-left: 25%;
-}
-
-.experience {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-article {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  animation: fadeInUp .5s ease-in-out .5s 1;
-} */
 
 @media screen and (max-width: 700px) {
+  header {
+    right: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    height: 10%;
+    z-index: 3;
+    background-color: var(--colorLight);
+  }
+
   header img {
-    width: 50%;
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 90%;
   }
 
-  nav {
-    flex-direction: column;
+  /* nav li a, nav li p {
+    color: var(--colorLight);
+    background: var(--color2);
+    font-style: italic;
   }
 
-  aside {
+  nav li li a, nav li li p {
+    color: var(--colorLight);
+    background: var(--color3);
+  } */
+
+  .hidden {
     display: none;
   }
 
+  .flexbox {
+    display: flex;
+  }
+
+  nav a, nav p {
+    font-size: 5vw;
+  }
+
+  main {
+    margin-right: 0%;
+    z-index: 0;
+  }
+
+  .dropbtn {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+
+  .dropdown-content {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: var(--colorLight);
+  }
+
   h1 {
-    font-size: 1.5em;
+    font-size: 5vh;
   }
 
   h2 {
-    font-size: 1em;
+    font-size: 3.5vh;
+  }
+
+  h3 {
+    font-size: 3vh;
   }
 
   p {
-    font-size: .6em;
+    font-size: 2vh;
   }
-
 }
