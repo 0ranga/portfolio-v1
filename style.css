@@ -1,0 +1,303 @@
+:root {
+  --colorDark: black;
+  --colorLight: white;
+  --color1: rgb(247, 72, 79);
+  --color2: rgb(248, 186, 139);
+  --color3: rgb(65, 90, 218);
+}
+
+/* @font-face {
+  font-family: myFont;
+  src: url(font/Bentham-Regular.ttf);
+} */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+} */
+body {
+  font-family: futura, myFont, didot, sans-serif;
+  color: var(--colorDark);
+  /* animation: fadeIn .5s ease-in .5s 1 forwards; */
+  background-color: var(--colorLight);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+header {
+  right: 0;
+  top: 0;
+  width: 22%;
+  position: fixed;
+  height: 100vh;
+}
+
+.dropbtn {
+  display: none;
+  margin-left: 20px;
+}
+
+header img {
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.fill-height-or-more>div, .fill-height-or-more>a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inside p {
+  text-align: right;
+  font-weight: normal;
+}
+
+nav a, nav p {
+  font-size: 3vw;
+  display: block;
+  color: var(--colorDark);
+  padding: 0px 20px;
+  text-decoration: none;
+  text-align: left;
+  animation: fadeInUp .5s ease-in-out .5s 1;
+}
+
+nav .outside:hover, nav .outside:hover, nav .outside:hover p, nav .outside:hover a {
+  cursor: pointer;
+  color: var(--colorLight);
+  background: var(--color2);
+  font-style: italic;
+}
+
+nav .inside:hover, nav .inside:hover, nav .inside:hover p, nav .inside:hover a {
+  cursor: pointer;
+  color: var(--colorLight);
+  background: var(--color3);
+  font-style: italic;
+}
+
+main {
+  margin-right: 22%;
+}
+
+#shuffle {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.row {
+  width: 50%;
+}
+
+.projectelement img {
+  width: 60%;
+  align-self: center;
+  display: block;
+}
+
+.wholewidth {
+  width: 100%;
+}
+
+.projectelement iframe {
+  width: 60%;
+  height: 400px;
+  align-self: center;
+  display: block;
+}
+
+.projectelement a {
+  width: 100%;
+}
+
+.projectelement a img {
+  width: 100%;
+}
+
+.projectelement .youtubeContainer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.projectelement {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.left {
+  position: relative;
+  right: 20%;
+}
+
+.right {
+  position: relative;
+  left: 20%;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    right: 0;
+    top: 0;
+    width: 100%;
+    /* 1/number of items in menu */
+    height: 9.09%;
+    z-index: 3;
+    background-color: var(--colorLight);
+  }
+
+  header img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 90%;
+  }
+
+  .mobile-header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  header a .mobile-header-img {
+    margin: auto;
+    height: 90%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .flexbox {
+    display: flex;
+  }
+
+  nav a, nav p {
+    font-size: 5vw;
+  }
+
+  main {
+    margin-right: 0%;
+    z-index: 0;
+  }
+
+  .flex_container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dropbtn {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    height: 80%;
+    width: 5vh;
+    padding: 0;
+    border: none;
+    font-size: 5vh;
+    background-color: var(--colorLight);
+    text-align: left;
+  }
+
+  .dropdown-content {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: var(--colorLight);
+  }
+
+  h1 {
+    font-size: 5vh;
+  }
+
+  h2 {
+    font-size: 3.5vh;
+  }
+
+  h3 {
+    font-size: 3vh;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  #shuffle {
+    flex-direction: column;
+    margin-left: 45px;
+  }
+
+  .projectelement {
+    margin-right: 45px;
+  }
+
+  .row {
+    width: auto;
+  }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Studio Mercvre</title>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="icofont.min.css">
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="imagesloaded.pkgd.min.js"></script>
+
+  <script src="mainscript.js"></script>
+
+  <style>
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: white;
+    }
+
+    .projectelement {
+      position: relative;
+    }
+
+    .projectelement:hover .overlay {
+      opacity: 1;
+    }
+
+    .projectelement img {
+      width: 100%;
+    }
+
+    .text {
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="flex_container">
+      <button onclick="dropdownFunction()" class="dropbtn"><i class="icofont-navigation-menu"></i></button>
+    </div>
+
+    <a class="mobile-header" href="index.html">
+      <img class="mobile-header-img" src="logo.png" alt="Studio Mercvre" />
+    </a>
+
+    <nav id="myDropdown" class="dropdown-content fill-height-or-more hidden">
+      <a href="index.html">
+        <img src="logo.png" alt="Studio Mercvre" />
+      </a>
+
+      <div id="visual" class="outside">
+        <p>Visual</p>
+      </div>
+
+      <div id="logo" class="inside">
+        <p>Logo</p>
+      </div>
+      <div id="illustration" class="inside">
+        <p>Illustration</p>
+      </div>
+      <div id="pattern" class="inside">
+        <p>Pattern</p>
+      </div>
+      <div id="photography" class="inside">
+        <p>Photography</p>
+      </div>
+      <div id="typography" class="inside">
+        <p>Typography</p>
+      </div>
+      <div id="video" class="inside">
+        <p>Video</p>
+      </div>
+      <div id="website" class="inside">
+        <p>Website</p>
+      </div>
+
+      <div id="audio" class="outside">
+        <p>Audio</p>
+      </div>
+
+      <div class="outside">
+        <a href="">About</a>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div id="shuffle">
+
+      <div class="row">
+
+        <div class="project visual logo" id="studiomercvre">
+          <div class="projectelement">
+            <a href="studiomercvre.html">
+              <img src="visual/logo/studiomercvre/studiomercvre1.png" alt="" />
+              <div class="overlay">
+                <div class="text">
+                  <h3>Studio Mercvre logo</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="project visual typography" id="west">
+          <div class="projectelement">
+            <a href="west.html">
+              <img src="visual/type/west/west1.png" alt="" />
+              <div class="overlay">
+                <div class="text">
+                  <h3>West</h3>
+                  <p>Handmade typography</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project visual photography" id="djordan">
+          <div class="projectelement"><a href="djordan.html"><img src="visual/photo/djordan/djordan1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual logo" id="phos">
+          <div class="projectelement"><a href="phos.html"><img src="visual/logo/phos/phos1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="pixelmuseum">
+          <div class="projectelement"><a href="pixelmuseum.html"><img src="visual/photo/pixelmuseum/pixelmuseum1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual pattern" id="planets">
+          <div class="projectelement"><a href="planets.html"><img src="visual/pattern/planets/planets1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="montrealwideview">
+          <div class="projectelement"><a href="montrealwideview.html"><img src="visual/photo/montrealwideview/montrealwideview1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual illustration" id="ruskho">
+          <div class="projectelement"><a href="ruskho.html"><img src="visual/illustration/ruskho/ruskho1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="habitat67">
+          <div class="projectelement"><a href="habitat67.html"><img src="visual/photo/habitat67/habitat671.png" alt="" /></a></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="project visual pattern" id="triangles">
+          <div class="projectelement"><a href="triangles.html"><img src="visual/pattern/triangles/triangles1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="morocco">
+          <div class="projectelement"><a href="morocco.html"><img src="visual/photo/morocco/morocco1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual pattern" id="flowers">
+          <div class="projectelement"><a href="flowers.html"><img src="visual/pattern/flowers/flowers1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="parisanalog">
+          <div class="projectelement"><a href="parisanalog.html"><img src="visual/photo/parisanalog/parisanalog1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual video" id="ruskhovideo">
+          <div class="projectelement"><a href="ruskhovideo.html"><img src="visual/video/ruskhovideo/ruskhovideo1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual typography" id="getyourhandsdirty">
+          <div class="projectelement"><a href="getyourhandsdirty.html"><img src="visual/type/getyourhandsdirty/getyourhandsdirty1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual logo" id="lartwhy">
+          <div class="projectelement"><a href="lartwhy.html"><img src="visual/logo/lartwhy/lartwhy1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual photography" id="montrealarch">
+          <div class="projectelement"><a href="montrealarch.html"><img src="visual/photo/montrealarch/montrealarch1.png" alt="" /></a></div>
+        </div>
+
+        <div class="project visual website" id="jordanpianostudio">
+          <div class="projectelement"><a href="jordanpianostudio.html"><img src="visual/website/jordanpianostudio/jordanpianostudio1.gif" alt="" /></a></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
