@@ -74,7 +74,7 @@ header {
 
 .dropbtn {
   display: none;
-  margin-left: 10%;
+  margin-left: 20px;
 }
 
 header img {
@@ -85,15 +85,18 @@ header img {
   margin-bottom: 10px;
 }
 
+.mobile-header {
+  display: none;
+}
+
 .fill-height-or-more {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-.fill-height-or-more > div, .fill-height-or-more > a {
+.fill-height-or-more>div, .fill-height-or-more>a {
   flex: 1;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -128,47 +131,7 @@ nav .inside:hover, nav .inside:hover, nav .inside:hover p, nav .inside:hover a {
   font-style: italic;
 }
 
-/* ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-li li p {
-  text-align: right;
-  font-weight: normal;
-}
-
-nav a, nav p {
-  cursor: pointer;
-  font-size: 3vw;
-  display: block;
-  padding: 0px 20px;
-  color: var(--colorDark);
-  text-decoration: none;
-  text-align: left;
-  animation: fadeInUp .5s ease-in-out .5s 1;
-}
-
-nav li a:hover, nav li p:hover {
-  color: var(--colorLight);
-  background: var(--color2);
-  font-style: italic;
-}
-
-nav li li a:hover, nav li li p:hover {
-  color: var(--colorLight);
-  background: var(--color3);
-} */
-
 main {
-  /* padding-left: 20%;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%; */
   margin-right: 22%;
 }
 
@@ -187,9 +150,6 @@ main {
   width: 60%;
   align-self: center;
   display: block;
-  /* margin: auto; */
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 .wholewidth {
@@ -201,9 +161,6 @@ main {
   height: 400px;
   align-self: center;
   display: block;
-  /* margin: auto; */
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 .projectelement a {
@@ -214,10 +171,6 @@ main {
   width: 100%;
 }
 
-/* .youtubeContainer {
-  width: 100%;
-  height: 300px;
-} */
 .projectelement .youtubeContainer iframe {
   width: 100%;
   height: 100%;
@@ -229,18 +182,7 @@ main {
   flex-wrap: wrap;
   margin-right: 30px;
   margin-bottom: 30px;
-  /* padding-left: 20%; */
 }
-
-/* img.left {
-  position: relative;
-  right: 20%;
-}
-
-img.right {
-  position: relative;
-  left: 20%;
-} */
 
 .left {
   position: relative;
@@ -252,14 +194,13 @@ img.right {
   left: 20%;
 }
 
-
 @media screen and (max-width: 700px) {
   header {
     right: 0;
     top: 0;
     width: 100%;
-    position: fixed;
-    height: 10%;
+    /* 1/number of items in menu */
+    height: 9.09%;
     z-index: 3;
     background-color: var(--colorLight);
   }
@@ -271,16 +212,18 @@ img.right {
     height: 90%;
   }
 
-  /* nav li a, nav li p {
-    color: var(--colorLight);
-    background: var(--color2);
-    font-style: italic;
+  .mobile-header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 
-  nav li li a, nav li li p {
-    color: var(--colorLight);
-    background: var(--color3);
-  } */
+  header a .mobile-header-img {
+    margin: auto;
+    height: 90%;
+  }
 
   .hidden {
     display: none;
@@ -299,10 +242,25 @@ img.right {
     z-index: 0;
   }
 
+  .flex_container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .dropbtn {
-    display: inline-block;
-    position: relative;
+    display: block;
+    cursor: pointer;
     z-index: 2;
+    position: relative;
+    height: 80%;
+    width: 5vh;
+    padding: 0;
+    border: none;
+    font-size: 5vh;
+    background-color: var(--colorLight);
+    text-align: left;
   }
 
   .dropdown-content {
@@ -328,5 +286,18 @@ img.right {
 
   p {
     font-size: 2vh;
+  }
+
+  #shuffle {
+    flex-direction: column;
+    margin-left: 45px;
+  }
+
+  .projectelement {
+    margin-right: 45px;
+  }
+
+  .row {
+    width: auto;
   }
 }
