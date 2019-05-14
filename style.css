@@ -194,7 +194,7 @@ main {
   left: 20%;
 }
 
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 850px) and (orientation: portrait) {
   header {
     right: 0;
     top: 0;
@@ -297,7 +297,7 @@ main {
 
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) and (orientation: portrait) {
 
   #shuffle {
     flex-direction: column;
