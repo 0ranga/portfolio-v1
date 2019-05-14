@@ -194,7 +194,7 @@ main {
   left: 20%;
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 812px) {
   header {
     right: 0;
     top: 0;
@@ -288,6 +288,11 @@ main {
     font-size: 2vh;
   }
 
+
+}
+
+@media only screen and (max-width: 650px) {
+
   #shuffle {
     flex-direction: column;
     margin-left: 45px;
@@ -300,4 +305,5 @@ main {
   .row {
     width: auto;
   }
+
 }

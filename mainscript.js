@@ -47,7 +47,7 @@ function showCategory(category) {
       });
     }
   });
-  if (!window.location.hash) {
+  if (!$("#myDropdown").hasClass("hidden")) {
     $("#myDropdown").toggleClass("hidden flexbox");
   }
 }
