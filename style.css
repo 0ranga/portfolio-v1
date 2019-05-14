@@ -194,7 +194,7 @@ main {
   left: 20%;
 }
 
-@media only screen and (max-device-width: 900px) and (orientation: portrait) {
+@media only screen and (max-width: 900px) and (orientation: portrait) {
   header {
     right: 0;
     top: 0;
@@ -290,14 +290,14 @@ main {
 
   html, body {
     height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; */
   }
 
 
 }
 
-@media only screen and (max-device-width: 650px) and (orientation: portrait) {
+@media only screen and (max-width: 650px) and (orientation: portrait) {
 
   header {
     right: 0;
@@ -394,8 +394,8 @@ main {
 
   html, body {
     height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; */
   }
 
   #shuffle {
