@@ -299,6 +299,105 @@ main {
 
 @media only screen and (max-width: 650px) and (orientation: portrait) {
 
+  header {
+    right: 0;
+    top: 0;
+    width: 100%;
+    /* 1/number of items in menu */
+    height: 9.09%;
+    z-index: 3;
+    background-color: var(--colorLight);
+  }
+
+  header img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 90%;
+  }
+
+  .mobile-header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  header a .mobile-header-img {
+    margin: auto;
+    height: 90%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .flexbox {
+    display: flex;
+  }
+
+  nav a, nav p {
+    font-size: 5vw;
+  }
+
+  main {
+    margin-right: 0%;
+    z-index: 0;
+  }
+
+  .flex_container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dropbtn {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    height: 80%;
+    width: 5vh;
+    padding: 0;
+    border: none;
+    font-size: 5vh;
+    background-color: var(--colorLight);
+    text-align: left;
+  }
+
+  .dropdown-content {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: var(--colorLight);
+  }
+
+  h1 {
+    font-size: 5vh;
+  }
+
+  h2 {
+    font-size: 3.5vh;
+  }
+
+  h3 {
+    font-size: 3vh;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  html, body {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
   #shuffle {
     flex-direction: column;
     margin-left: 45px;
