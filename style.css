@@ -157,12 +157,12 @@ main {
   width: 100%;
 }
 
-.projectelement iframe {
+/* .projectelement iframe {
   width: 60%;
   height: 400px;
   align-self: center;
   display: block;
-}
+} */
 
 .projectelement a {
   width: 100%;
