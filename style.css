@@ -68,7 +68,7 @@ p {
 header {
   right: 0;
   top: 0;
-  width: 22%;
+  width: 25%;
   position: fixed;
   height: 100%;
 }
@@ -109,7 +109,7 @@ header img {
 }
 
 nav a, nav p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   display: block;
   color: var(--colorDark);
   padding: 0px 20px;
@@ -133,7 +133,7 @@ nav .inside:hover, nav .inside:hover, nav .inside:hover p, nav .inside:hover a {
 }
 
 main {
-  margin-right: 22%;
+  margin-right: 25%;
 }
 
 #shuffle {
@@ -201,7 +201,7 @@ main {
     top: 0;
     width: 100%;
     /* 1/number of items in menu */
-    height: 9.09%;
+    height: 7.69%;
     z-index: 3;
     background-color: var(--colorLight);
   }
@@ -302,7 +302,7 @@ main {
     top: 0;
     width: 100%;
     /* 1/number of items in menu */
-    height: 9.09%;
+    height: 7.69%;
     z-index: 3;
     background-color: var(--colorLight);
   }
