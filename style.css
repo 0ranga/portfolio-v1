@@ -43,26 +43,26 @@ html, body {
   }
 } */
 body {
-  font-family: futura, myFont, didot, sans-serif;
+  font-family: "gill sans",didot, sans-serif;
   color: var(--colorDark);
   /* animation: fadeIn .5s ease-in .5s 1 forwards; */
   background-color: var(--colorLight);
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.3rem;
 }
 
 header {
@@ -106,10 +106,13 @@ header img {
 .inside p {
   text-align: right;
   font-weight: normal;
+  font-weight: 550;
 }
 
 nav a, nav p {
   font-size: 2.5vw;
+  line-height: 2.5vw;
+  font-weight: 550;
   display: block;
   color: var(--colorDark);
   padding: 0px 20px;
@@ -167,12 +170,25 @@ main {
 }
 
 .text h3 {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 5px;
+
+  font-family: blenny, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.text h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: blenny, sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .text hr {
-  width: 30%;
+  width: 60px;
   margin: 10px auto 5px;
   border: 0.5px solid black;
 }
@@ -186,8 +202,27 @@ main {
   font-style: italic;
 }
 
+.project-content-container {
+  margin-right: 30px;
+}
+
+.project-content {
+  margin: auto;
+  width: 80%;
+}
+
+.project-content p {
+  font-weight: lighter;
+}
+
+.project-content-container h2 {
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .projectelement img {
-  width: 60%;
+  width: 80%;
   align-self: center;
   display: block;
 }
