@@ -204,27 +204,44 @@ main {
 
 .project-content-container {
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .project-content {
   margin: auto;
-  width: 80%;
+  width: 85%;
 }
 
 .project-content p {
   font-weight: lighter;
+  line-height: 1.8rem;
 }
 
 .project-content-container h2 {
-  margin-bottom: 20px;
-  font-style: italic;
-  font-weight: bold;
+  font-family: rizado-script, cursive, script, sans-serif;
+  font-weight: 400;
+  /* line-height: 2.5rem; */
+  font-style: normal;
+  /* font-size: 2rem; */
+  margin-bottom: 10px;
 }
 
 .projectelement img {
-  width: 80%;
+  width: 85%;
   align-self: center;
   display: block;
+}
+
+.project-img-desc {
+  width: 85%;
+}
+
+.project-img-desc p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
 .wholewidth {
@@ -321,6 +338,10 @@ main {
     height: 100%;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .projectelement img {
+    width: 100%;
   }
 
   .dropbtn {
