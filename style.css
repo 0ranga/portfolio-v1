@@ -320,6 +320,10 @@ main {
     display: none;
   }
 
+  .project-content-container{
+    margin-right: 20px;
+  }
+
   .project-content {
     width: 100%;
   }
@@ -342,6 +346,10 @@ main {
     height: 100%;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .projectelement {
+    margin-right: 20px;
   }
 
   .projectelement img {
@@ -389,6 +397,7 @@ main {
 
   #shuffle {
     margin-top: 20%;
+    margin-left:20px;
   }
 }
 
