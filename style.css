@@ -43,7 +43,7 @@ html, body {
   }
 } */
 body {
-  font-family: "gill sans",didot, sans-serif;
+  font-family: "gill sans", didot, sans-serif;
   color: var(--colorDark);
   /* animation: fadeIn .5s ease-in .5s 1 forwards; */
   background-color: var(--colorLight);
@@ -63,6 +63,24 @@ h3 {
 
 p {
   font-size: 1.3rem;
+}
+
+a {
+  color: var(--colorDark);
+}
+
+a:hover {
+  color: var(--color2);
+  /* text-decoration: underline; */
+}
+
+.finallink {
+  text-decoration: none;
+}
+
+.finallink:hover {
+  text-decoration: underline;
+  color:inherit;
 }
 
 header {
@@ -173,7 +191,6 @@ main {
   font-size: 2.5rem;
   line-height: 2.5rem;
   margin-bottom: 5px;
-
   font-family: blenny, sans-serif;
   font-weight: 900;
   font-style: normal;
@@ -224,6 +241,7 @@ main {
   font-style: normal;
   /* font-size: 2rem; */
   margin-bottom: 10px;
+  padding: 0 1rem;
 }
 
 .projectelement img {
@@ -320,7 +338,7 @@ main {
     display: none;
   }
 
-  .project-content-container{
+  .project-content-container {
     margin-right: 20px;
   }
 
@@ -397,7 +415,7 @@ main {
 
   #shuffle {
     margin-top: 20%;
-    margin-left:20px;
+    margin-left: 20px;
   }
 }
 
