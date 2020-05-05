@@ -320,6 +320,10 @@ main {
     display: none;
   }
 
+  .project-content {
+    width: 100%;
+  }
+
   .flexbox {
     display: flex;
   }
@@ -484,12 +488,12 @@ main {
 
   #shuffle {
     flex-direction: column;
-    margin-left: 45px;
+    /* margin-left: 45px; */
     margin-top: 30%;
   }
 
   .projectelement {
-    margin-right: 45px;
+    /* margin-right: 45px; */
   }
 
   .row {
