@@ -262,6 +262,11 @@ main {
   margin-top: 2px;
 }
 
+em {
+  font-style: italic;
+  font-weight: normal;
+}
+
 .wholewidth {
   width: 100%;
 }
