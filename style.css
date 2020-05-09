@@ -219,6 +219,10 @@ main {
   font-style: italic;
 }
 
+.project {
+  width: 100%;
+}
+
 .project-content-container {
   margin-right: 30px;
   margin-bottom: 30px;
