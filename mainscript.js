@@ -26,6 +26,12 @@
 //   }
 // }
 
+fetch('./header.html').then(response => {
+  return response.text();
+}).then(data => {
+  document.querySelector('header').innerHTML = data;
+});
+
 
 //scroll back to top when images inside #shuffle are loaded
 function totop() {
@@ -49,6 +55,7 @@ function showCategory(category) {
   });
   if (!$("#myDropdown").hasClass("hidden")) {
     $("#myDropdown").toggleClass("hidden flexbox");
+    $(".men-icon").toggleClass("no-display");
   }
 }
 
