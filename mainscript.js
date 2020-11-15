@@ -56,6 +56,7 @@ function showCategory(category) {
 toggle between hiding and showing the dropdown content */
 function dropdownFunction() {
   $("#myDropdown").toggleClass("hidden flexbox");
+  $(".men-icon").toggleClass("no-display");
 }
 
 // Close the dropdown if the user clicks outside of it
