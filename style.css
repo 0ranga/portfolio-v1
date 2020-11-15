@@ -355,6 +355,10 @@ em {
     right: 0%;
   }
 
+  nav a.logo-in-nav {
+    display: none;
+  }
+
   header a .mobile-header-img {
     margin: auto;
     height: 90%;
@@ -461,10 +465,6 @@ em {
     margin: auto;
     width: auto;
     height: 90%;
-  }
-
-  nav a.logo-in-nav {
-    display: none;
   }
 
   .mobile-header {
