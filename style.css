@@ -322,12 +322,12 @@ em {
 }
 
 @media only screen and (max-width: 900px) and (orientation: portrait) {
-  header {
+header {
     right: 0;
     top: 0;
     width: 100%;
     /* 1/number of items in menu */
-    height: 7.69%;
+    height: 60px;
     z-index: 3;
     background-color: var(--colorLight);
   }
@@ -450,15 +450,6 @@ em {
 }
 
 @media only screen and (max-width: 650px) and (orientation: portrait) {
-  header {
-    right: 0;
-    top: 0;
-    width: 100%;
-    /* 1/number of items in menu */
-    height: 60px;
-    z-index: 3;
-    background-color: var(--colorLight);
-  }
 
   header img {
     display: block;
