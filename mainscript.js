@@ -30,6 +30,18 @@ fetch('./header.html').then(response => {
   return response.text();
 }).then(data => {
   document.querySelector('header').innerHTML = data;
+  $("nav .outside, nav .inside").click(function() {
+    //position();
+    //shuffle();
+    var category = $(this).attr("id");
+    if (window.location.pathname != "/index.html") {
+      window.location = "/index.html#category=" + category;
+    } else {
+      totop();
+      showCategory(category);
+    }
+
+  });
 });
 
 
@@ -103,18 +115,6 @@ $(document).ready(function() {
   //
   // });
 
-  $("nav .outside, nav .inside").click(function() {
-    //position();
-    //shuffle();
-    var category = $(this).attr("id");
-    if (window.location.pathname != "/index.html") {
-      window.location = "/index.html#category=" + category;
-    } else {
-      totop();
-      showCategory(category);
-    }
-
-  });
 
 
 
