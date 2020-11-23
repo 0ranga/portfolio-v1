@@ -39,6 +39,7 @@ fetch('./header.html').then(response => {
     } else {
       totop();
       showCategory(category);
+      checkPosition();
     }
 
   });
@@ -89,6 +90,32 @@ function dropdownFunction() {
 //   }
 // }
 
+var elements;
+var windowHeight;
+
+function init() {
+  elements = document.querySelectorAll('.transparent');
+  // console.log(elements.length);
+  windowHeight = window.innerHeight;
+}
+
+function checkPosition() {
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    var positionFromTop = elements[i].getBoundingClientRect().top;
+
+    if (positionFromTop - windowHeight <= -140) {
+      element.classList.add('fade-in-element');
+      element.classList.remove('transparent');
+    }
+
+    // if ((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) {
+    //   element.className = element.className.replace('fade-in-element','transparent');
+    // }
+
+  }
+}
+
 window.onload = (function() {
 
   // if fragment exists
@@ -100,39 +127,13 @@ window.onload = (function() {
     showCategory(category);
   }
 
-  (function() {
-    var elements;
-    var windowHeight;
-  
-    function init() {
-      elements = document.querySelectorAll('.transparent');
-      console.log(elements.length);
-      windowHeight = window.innerHeight;
-    }
-  
-    function checkPosition() {
-      for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        var positionFromTop = elements[i].getBoundingClientRect().top;
-  
-        if (positionFromTop - windowHeight <= -140) {
-          element.classList.add('fade-in-element');
-          element.classList.remove('transparent');
-        }
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
 
-        // if ((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) {
-        //   element.className = element.className.replace('fade-in-element','transparent');
-        // }
+  init();
+  //requestAnimationFrame(checkPosition);
+  checkPosition();
 
-      }
-    }
-  
-    window.addEventListener('scroll', checkPosition);
-    window.addEventListener('resize', init);
-  
-    init();
-    requestAnimationFrame(checkPosition);
-  })();
 
 
   //only shows the category that has been clicked in the navigation bar
