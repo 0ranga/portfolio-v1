@@ -2,14 +2,65 @@
   --colorDark: black;
   --colorLight: white;
   --color1: rgb(247, 72, 79);
-  --color2: rgb(248, 186, 139);
-  --color3: rgb(65, 90, 218);
+  --color2: #FF4901;
+  --color3: #FFD880;
 }
 
-/* @font-face {
-  font-family: myFont;
-  src: url(font/Bentham-Regular.ttf);
-} */
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-Light.ttf);
+  font-weight: light;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-LightItalic.ttf);
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(font/Poppins/Poppins-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap'); */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,11 +109,19 @@ html, body {
 }
 
 body {
-  font-family: "gill sans", didot, sans-serif;
   color: var(--colorDark);
   /* animation: fadeIn .5s ease-in .5s 1 forwards; */
   background-color: var(--colorLight);
+  font-family: p22-underground, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
+
+/* p {
+  font-family: p22-underground, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+} */
 
 h1 {
   font-size: 3rem;
@@ -138,14 +197,13 @@ header img {
 
 .inside p {
   text-align: right;
-  font-weight: normal;
-  font-weight: 550;
+  font-weight: 400;
 }
 
 nav a, nav p {
-  font-size: 2.5vw;
-  line-height: 2.5vw;
-  font-weight: 550;
+  font-size: 2.8vh;
+  /* line-height: 2.5vh; */
+  font-weight: 400;
   display: block;
   color: var(--colorDark);
   padding: 0px 20px;
@@ -206,16 +264,22 @@ main {
   font-size: 2.5rem;
   line-height: 2.5rem;
   margin-bottom: 5px;
-  font-family: blenny, sans-serif;
-  font-weight: 900;
+  /* font-family: blenny, sans-serif;
+  font-weight: bold;
+  font-style: normal; */
+  font-family: prohibition, sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 .text h1 {
   font-size: 3rem;
   line-height: 3rem;
-  font-family: blenny, sans-serif;
-  font-weight: 900;
+  /* font-family: blenny, sans-serif;
+  font-weight: bold;
+  font-style: normal; */
+  font-family: prohibition, sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -249,7 +313,7 @@ main {
 }
 
 .project-content p {
-  font-weight: lighter;
+  font-weight: 100;
   line-height: 1.8rem;
 }
 
