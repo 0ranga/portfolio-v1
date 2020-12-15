@@ -201,6 +201,11 @@ header img {
   font-weight: 400;
 }
 
+nav {
+  font-family: p22-underground, sans-serif ;
+  font-weight: normal;
+}
+
 nav a, nav p {
   font-size: 2.8vh;
   /* line-height: 2.5vh; */
